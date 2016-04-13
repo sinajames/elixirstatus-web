@@ -9,8 +9,8 @@ defmodule ElixirStatus.ShortLinkControllerTest do
   end
 
   test "shows chosen resource", %{conn: conn} do
-    url = "http://github.com"
-    uid = LinkShortener.to_uid(url)
+    url  = "http://github.com"
+    uid  = LinkShortener.to_uid(url)
     conn = get conn, "/=#{uid}"
     assert html_response(conn, 302)
   end
