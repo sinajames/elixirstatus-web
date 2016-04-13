@@ -8,15 +8,15 @@ config :elixir_status, ElixirStatus.Endpoint,
 
 # Configure your database
 config :elixir_status, ElixirStatus.Repo,
-  adapter: Ecto.Adapters.MySQL,
+  adapter:  Ecto.Adapters.MySQL,
   username: "secret",
   password: "secret",
   database: "elixir_status_prod",
-  size: 20 # The amount of database connections in the pool
+  size:     20 # The amount of database connections in the pool
 
 config :ex_twitter, :oauth, [
-   consumer_key: "secret",
-   consumer_secret: "secret",
-   access_token: "secret",
+   consumer_key:        "secret",
+   consumer_secret:     "secret",
+   access_token:        "secret",
    access_token_secret: "secret"
 ]
