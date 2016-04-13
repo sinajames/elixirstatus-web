@@ -7,11 +7,11 @@ use Mix.Config
 # watchers to your application. For example, we use it
 # with brunch.io to recompile .js and .css sources.
 config :elixir_status, ElixirStatus.Endpoint,
-  http: [port: 4000],
-  debug_errors: true,
-  code_reloader: true,
+  http:                [port: 4000],
+  debug_errors:        true,
+  code_reloader:       true,
   cache_static_lookup: false,
-  watchers: [node: ["node_modules/brunch/bin/brunch", "watch"]]
+  watchers:            [node: ["node_modules/brunch/bin/brunch", "watch"]]
 
 # Watch static and templates for browser reloading.
 config :elixir_status, ElixirStatus.Endpoint,
@@ -28,17 +28,17 @@ config :logger, :console, format: "[$level] $message\n"
 
 # Configure your database
 config :elixir_status, ElixirStatus.Repo,
-  adapter: Ecto.Adapters.MySQL,
+  adapter:  Ecto.Adapters.MySQL,
   username: System.get_env("MYSQL_DEV_DB_USERNAME") || "root",
   password: System.get_env("MYSQL_DEV_DB_PASSWORD") || "",
   database: "elixir_status_dev",
-  size: 10 # The amount of database connections in the pool
+  size:     10 # The amount of database connections in the pool
 
-config :elixir_status, :base_url, "http://localhost:4000"
+config :elixir_status, :base_url,                  "http://localhost:4000"
 
-config :elixir_status, :twitter_screen_name, "elixirstatus"
-config :elixir_status, :twitter_dm_recipient, "elixirstatus"
+config :elixir_status, :twitter_screen_name,       "elixirstatus"
+config :elixir_status, :twitter_dm_recipient,      "elixirstatus"
 
-config :elixir_status, :admin_user_ids, [1]
+config :elixir_status, :admin_user_ids,            [1]
 config :elixir_status, :admin_overview_iframe_url, "http://twitter.com/"
-config :elixir_status, :admin_site_switcher_html, ""
+config :elixir_status, :admin_site_switcher_html,  ""

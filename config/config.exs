@@ -7,16 +7,16 @@ use Mix.Config
 
 # Configures the endpoint
 config :elixir_status, ElixirStatus.Endpoint,
-  url: [host: "localhost"],
-  root: Path.dirname(__DIR__),
-  secret_key_base: "LstH3/4lI4FeMXhEDifTp4UP+EAUR8RsyElC9rzzC7uyR1+hJ9U94iTHiajgzEwQ",
-  debug_errors: false,
-  pubsub: [name: ElixirStatus.PubSub,
+  url:              [host: "localhost"],
+  root:             Path.dirname(__DIR__),
+  secret_key_base:  "LstH3/4lI4FeMXhEDifTp4UP+EAUR8RsyElC9rzzC7uyR1+hJ9U94iTHiajgzEwQ",
+  debug_errors:     false,
+  pubsub:           [name: ElixirStatus.PubSub,
            adapter: Phoenix.PubSub.PG2]
 
 # Configures Elixir's Logger
 config :logger, :console,
-  format: "$time $metadata[$level] $message\n",
+  format:   "$time $metadata[$level] $message\n",
   metadata: [:request_id]
 
 # Import environment specific config. This must remain at the bottom
