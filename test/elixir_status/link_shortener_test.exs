@@ -4,7 +4,7 @@ defmodule ElixirStatus.LinkShortenerTest do
   alias ElixirStatus.LinkShortener
 
   test "link shortening" do
-    url = "http://elixirstatus.com/"
+    url  = "http://elixirstatus.com/"
     uid1 = LinkShortener.to_uid(url)
     uid2 = LinkShortener.to_uid(url)
 
